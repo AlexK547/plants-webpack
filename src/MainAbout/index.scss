@@ -1,0 +1,115 @@
+@import '../utils/commonStyles.scss';
+
+// ----- About section -----
+
+.about {
+  height: 666px;
+  width: 100%;
+  background: $bg-section2;
+
+  &__items {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1222px;
+    transition: all 0.5s;
+  }
+  &__content {
+    width: 605px;
+    padding-top: 105px;
+  }
+  &__title {
+    margin-bottom: 38px;
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    color: #499A18;
+    &_orange {
+      color: #E06733;
+    }
+  }
+  &__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #636060;
+  }
+  &__img {
+    margin-top: 97px;
+    width: 464px;
+    height: 479px;
+    background: url("../img/houseplant.jpg");
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+  }
+
+  @media screen and (max-width: 1439px) {
+    height: 783px;
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 668px;
+    }
+    &__content {
+      width: 668px;
+      padding-top: 40px;
+      text-align: center;
+    }
+    &__title {
+      font-size: 35px;
+      line-height: 46px;
+      margin-bottom: 50px;
+    }
+    &__text {
+      text-align: start;
+    }
+    &__img {
+      margin-top: 68px;
+      width: 250px;
+      height: 258px;
+      background: url("../img/houseplant768.jpg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 516px;
+    &__items {
+      width: 330px;
+    }
+    &__content {
+      width: 330px;
+      padding-top: 30px;
+    }
+    &__title {
+      font-size: 25px;
+      line-height: 33px;
+      margin-bottom: 13px;
+    }
+    &__text {
+      text-align: start;
+      font-size: 15px;
+      line-height: 25px;
+    }
+    &__img {
+      margin-top: 4px;
+      width: 150px;
+      height: 147px;
+      background: url("../img/houseplant380.jpg");
+      background-repeat: no-repeat;
+    }
+  }
+  @media screen and (max-width: 379px) {
+    &__items, &__content {
+      width: 290px;
+    }
+  }
+}
