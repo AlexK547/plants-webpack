@@ -1,0 +1,18 @@
+// ----- Variables -----
+
+$color-black: #000000;
+$color-nav: #010201;
+$color-nav_active: #E06733;
+$bg-section: #EDF2EC;
+$bg-section2: #FFFFFF;
+$color-title: #717171;
+$color-title_green: #499A18;
+$color-text: #636060;
+
+@mixin inter-normal($f-size, $l-height) {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: $f-size;
+  line-height: $l-height;
+}

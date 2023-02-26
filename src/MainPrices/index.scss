@@ -1,0 +1,338 @@
+@import '../utils/commonStyles.scss';
+
+// ----- Prices section -----
+
+.prices {
+  height: 560px;
+  width: 100%;
+  background: $bg-section2;
+  transition: all 0.5s;
+
+  &__items {
+    margin: 0 auto;
+    width: 1222px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .options {
+    padding-top: 2px;
+
+    &__title {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      color: #000000;
+    }
+    &__items {
+      margin-top: 60px;
+      height: 282px;
+      width: 332px;
+      border: 1px solid #E3E1D5;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 32px;
+      transition: all 0.5s;
+    }
+    &__items_active {
+      height: 386px;
+    }
+    &__item {
+      width: 250px;
+      height: 50px;
+      background: #EDF2EC;
+      border-radius: 20px;
+      transition: all 0.5s;
+    }
+    &__item_active {
+      height: 154px;
+      background: #D6E7D2;
+    }
+    &__item-head {
+      width: 250px;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 20px;
+      cursor: pointer;
+
+      &-title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        color: #000000;
+        margin-left: 40px;
+      }
+      &-arrow {
+        width: 16px;
+        height: 16px;
+        background: #D9D9D9;
+        border-radius: 50%;
+        background-image: url('../img/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 40px;
+        transition: all 0.5s;
+      }
+      &-arrow_active {
+        background: #AEA1A1;
+        border-radius: 50%;
+        background-image: url('../img/arrow-up.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    &__item-bottom {
+      display: none;
+      margin-left: 40px;
+      margin-top: -12px;
+      width: 169px;
+      height: 0;
+      transition: all 0.5s;
+    }
+    &__item-bottom_active {
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__item-line {
+      width: 164px;
+      border: 0.5px solid #AEA1A1;
+    }
+    &__item-content {
+      margin-top: 6px;
+      margin-bottom: 6px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 10px;
+      color: #717171;
+    }
+    &__item-price {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 20px;
+
+      &-dollar {
+        color: #E06733;
+      }
+      &-cost {
+        font-size: 16px;
+        color: #E06733;
+      }
+      &-text {
+        font-weight: 400;
+        color: #000000;
+      }
+    }
+    &__item-btn {
+      margin-top: 12px;
+      height: 25px;
+      width: 86px;
+      background: #FFFFFF;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      color: #717171;
+    }
+  }
+
+  .content {
+    width: 452px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 3px;
+
+    &__title {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50px;
+      text-align: right;
+      color: #000000;
+      &_green {
+        color: #499A18;
+      }
+    }
+    &__btn {
+      width: 162px;
+      height: 50px;
+      margin-top: 40px;
+      border: 1px solid #E06733;
+      border-radius: 5px;
+      background: inherit;
+      font-family: 'Inika';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+      text-align: center;
+      color: #E06733;
+      transition: all 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        background: #E06733;
+        color: #FFFFFF;
+      }
+    }
+    &__img {
+      width: 152px;
+      height: 175px;
+      background: url('../img/prices-leafs.png');
+      margin-top: 35px;
+    }
+  }
+
+  @media screen and (max-width: 1439px) {
+    height: 585px;
+    &__items {
+      width: 668px;
+      padding-top: 40px;
+    }
+    .options {
+      padding-top: 0px;
+      &__title {
+        padding-left: 15px;
+        font-size: 35px;
+        line-height: 42px;
+      }
+      &__items {
+        margin-top: 58px;
+      }
+    }
+    .content {
+      width: 296px;
+      margin-top: 99px;
+
+      &__title {
+        font-size: 25px;
+        line-height: 35px;
+      }
+      &__btn {
+        margin-top: 29px;
+      }
+      &__img {
+        margin-top: 29px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 512px;
+    &_active {
+      height: 616px;
+    }
+    &__items {
+      width: 330px;
+      padding-top: 25px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .options {
+      padding-top: 0px;
+      text-align: center;
+      &__title {
+        padding-left: 0px;
+        font-size: 25px;
+        line-height: 30px;
+      }
+      &__items {
+        margin-top: 37px;
+        height: 235px;
+        width: 224px;
+        row-gap: 14px;
+      }
+      &__items_active {
+        height: 339px;
+      }
+      &__item {
+        width: 180px;
+        height: 50px;
+      }
+      &__item_active {
+        height: 154px;
+        background: #D6E7D2;
+      }
+      &__item-head {
+        width: 180px;
+        height: 50px;
+        &-title {
+          margin-left: 30px;
+          font-size: 15px;
+          line-height: 20px;
+        }
+        &-arrow {
+          margin-right: 30px;
+        }
+      }
+      &__item-bottom {
+        margin-left: 30px;
+        width: 120px;
+      }
+      &__item-line {
+        width: 114px;
+      }
+      &__item-content {
+        width: 100px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        font-size: 8px;
+        text-align: start;
+      }
+      &__item-price {
+        text-align: start;
+      }
+      &__item-btn {
+        margin-top: 6px;
+      }
+    }
+    .content {
+      width: 330px;
+      margin-top: 18px;
+      align-items: center;
+      &__title {
+        width: 250px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 35px;
+      }
+      &__btn {
+        margin-top: 20px;
+        width: 121px;
+        height: 35px;
+        font-size: 15px;
+        line-height: 20px;
+      }
+      &__img {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: 379px) {
+    &__items, .content {
+      width: 300px;
+    }
+  }
+}

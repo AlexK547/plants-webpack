@@ -1,3 +1,134 @@
+@import '../utils/commonStyles.scss';
+
+// ----- Welcome section -----
+
 .welcome {
-  color: green;
+  height: 532px;
+  width: 100%;
+  background: $bg-section;
+
+  &__items {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+    transition: all 0.5s;
+  }
+  &__content {
+    width: 549px;
+    margin-top: 102px;
+  }
+  &__img {
+    margin-top: 60px;
+    margin-left: -10px;
+    height: 407px;
+    width: 449px;
+    background: url("../img/leafs.png");
+    background-repeat: no-repeat;
+  }
+  &__title {
+    margin-bottom: 44px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 50px;
+    color: $color-title;
+
+    &_green {
+      color: $color-title_green;
+    }
+  }
+  &__text {
+    width: 525px;
+    margin-bottom: 48px;
+    @include inter-normal(20px, 35px);
+    color: $color-text;
+  }
+  &__btn {
+    width: 158px;
+    height: 44px;
+    border: 2px solid #E06733;
+    border-radius: 10px;
+    background: inherit;
+    @include inter-normal(16px, 20px);
+    color: $color-black;
+    transition: all 0.5s;
+
+    &:hover {
+      cursor: pointer;
+      background: #E06733;
+      color: #FFFFFF;
+    }
+  }
+
+  @media screen and (max-width: 1439px) {
+    height: 420px;
+
+    &__items {
+      width: 668px;
+    }
+    &__content {
+      width: 346px;
+      margin-top: 40px;
+      order: 1;
+    }
+    &__img {
+      margin-top: 32px;
+      margin-left: 0;
+      margin-right: 8px;
+      height: 254px;
+      width: 280px;
+      background: url("../img/leafs768.png");
+      background-repeat: no-repeat;
+      order: 2;
+    }
+    &__title {
+      width: 341px;
+      margin-bottom: 32px;
+      font-size: 35px;
+    }
+    &__text {
+      width: 341px;
+      margin-bottom: 35px;
+      margin-left: 5px;
+      @include inter-normal(16px, 25px);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 300px;
+
+    &__items {
+      width: 330px;
+    }
+    &__img {
+      display: none;
+    }
+    &__content {
+      margin-top: 27px;
+    }
+    &__title {
+      width: 330px;
+      margin-bottom: 20px;
+      font-size: 25px;
+      line-height: 35px;
+    }
+    &__text {
+      width: 320px;
+      margin-bottom: 25px;
+      margin-left: 0px;
+    }
+    &__btn {
+      width: 100px;
+      height: 34px;
+      @include inter-normal(10px, 20px);
+    }
+  }
+  @media screen and (max-width: 379px) {
+    &__items, &__title, &__text {
+      width: 290px;
+      margin-bottom: 15px;
+    }
+  }
 }
