@@ -1,10 +1,12 @@
 import './index.scss';
 import Header from './Header';
 import Main from './Main';
+import Footer from './Footer';
 
 const root = document.getElementById('root');
 root.append(Header);
 root.append(Main);
+root.append(Footer);
 
 const burger = document.querySelector("#burger");
 const burgerItems = document.querySelector(".burger__items");

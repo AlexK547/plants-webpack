@@ -1,0 +1,96 @@
+@import '../utils/commonStyles.scss';
+
+// ----- FOOTER -----
+
+footer {
+  height: 130px;
+  background: $bg-section2;
+  @media screen and (max-width: 1439px) {
+    height: 181px;
+  }
+  @media screen and (max-width: 767px) {
+    height: 146px;
+  }
+}
+
+.footer {
+  margin: 0 auto;
+  padding-top: 2px;
+  width: 1222px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a, & {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    transition: all 0.5s;
+  }
+  a:hover {
+    cursor: pointer;
+    color: $color-nav_active;
+  }
+
+  .github {
+    width: 169px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .rsschool {
+    padding-left: 19px;
+  }
+
+  .socials {
+    width: 188px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  @media screen and (max-width: 1439px) {
+    padding-top: 0px;
+    height: 130px;
+    width: 668px;
+    flex-direction: column;
+    .github {
+      padding-top: 33px;
+    }
+    .rsschool {
+      padding-left: 5px;
+      margin-top: 15px;
+      margin-bottom: 28px;
+    }
+    .socials {
+      margin-left: 5px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    padding-top: 0px;
+    height: 130px;
+    width: 330px;
+    flex-direction: column;
+    .github {
+      padding-top: 22px;
+    }
+    .rsschool {
+      padding-left: 0px;
+      margin-top: 15px;
+      margin-bottom: 13px;
+    }
+    .socials {
+      margin-left: 0px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    width: 300px;
+  }
+}
